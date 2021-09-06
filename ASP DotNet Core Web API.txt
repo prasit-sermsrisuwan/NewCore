@@ -1,0 +1,23 @@
+####### ASP.Net Core 5 Web API & Entity Framework Core
+>dotnet new webapi
+>dotnet tool install --global dotnet-ef
+>dotnet tool update --global dotnet-ef
+>dotnet add package Microsoft.EntityFrameworkCore.Design
+>dotnet ef
+
+#######  SQL Server Provider
+>dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+>dotnet ef  dbcontext scaffold "Server=PAN0402002NB;Database=CreditCards;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+####### Oracle Provider
+>dotnet add package Oracle.EntityFrameworkCore --version 5.21.3
+>dotnet add package Microsoft.EntityFrameworkCore.Relational --version 5.0.9
+>dotnet add package Oracle.ManagedDataAccess.Core --version 3.21.3
+
+####### ConnectionString in appsettings.json
+"ConnectionStrings": {
+    "DefaultConnection": "Server=PAN0402002NB;Database=CreditCards;Trusted_Connection=True;"
+  },
+
+####### Service in Startup.cs
+services.AddDbContext<CreditCardsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));

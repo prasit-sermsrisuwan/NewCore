@@ -1,0 +1,3 @@
+####### Angular Installation
+>npm install -g @angular/cli@latest
+>ng new ProjectName
