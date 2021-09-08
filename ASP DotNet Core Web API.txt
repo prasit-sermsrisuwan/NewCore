@@ -1,5 +1,5 @@
 ####### ASP.Net Core 5 Web API & Entity Framework Core
->dotnet new webapi
+>dotnet new webapi -n NewCoreAPI
 >dotnet tool install --global dotnet-ef
 >dotnet tool update --global dotnet-ef
 >dotnet add package Microsoft.EntityFrameworkCore.Design
