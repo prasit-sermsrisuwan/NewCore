@@ -222,3 +222,23 @@ $NewCoreSys-theme-dark-purple: mat-dark-theme($NewCoreSys-primary-purple, $NewCo
 html, body { height: 100%; }
 
 body { margin: 0; }
+
+.error.mat-snack-bar-container{
+  background: #cc0000;
+  color: white;
+}
+
+.success.mat-snack-bar-container{
+  background: #3df506;
+  color: white;
+}
+
+.info.mat-snack-bar-container{
+  background: #05bef7;
+  color: white;
+}
+
+.warn.mat-snack-bar-container{
+  background: #f58d05;
+  color: white;
+}

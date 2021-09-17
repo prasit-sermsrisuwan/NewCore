@@ -14,6 +14,7 @@ import { HomeComponent } from './layout/home/home.component';
 import { AcctReceiveComponent } from './layout/acct-receive/acct-receive.component';
 import { FormsModule } from '@angular/forms';
 import { DialogComponent } from './dialog/dialog.component';
+import { NotifierComponent } from './notifier/notifier.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DialogComponent } from './dialog/dialog.component';
     FooterComponent,
     HomeComponent,
     AcctReceiveComponent,
-    DialogComponent
+    DialogComponent,
+    NotifierComponent
   ],
   imports: [
     BrowserModule,

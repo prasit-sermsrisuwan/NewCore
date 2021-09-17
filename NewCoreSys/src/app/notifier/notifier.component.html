@@ -1,0 +1,14 @@
+<div *ngIf="data.type === 'alert'">
+    <div class="pb-2">
+        <span>{{ title | titlecase }}</span>
+        <button class="btn-close" (click)="snackBarRef.dismiss()" mat-icon-button>
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div class="content-style">
+        {{ data.message }}
+    </div>
+    <div class="btn-style" *ngIf="showButton">
+        <button class="btn-md" mat-raised-button (click)="snackBarRef.dismiss()">{{ data.button }}</button>
+    </div>
+</div>
