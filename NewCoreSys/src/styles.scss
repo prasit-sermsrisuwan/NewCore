@@ -1,0 +1,224 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$mat-primary-blue-scheme: (
+  100: #bcd7ee,
+  500: #4273d9,
+  700: #2a4cbb,
+  contrast: (
+    100: #090909,
+    500: #ffffff,
+    700: #ffffff,
+  ));
+$mat-primary-purple-scheme: (
+  100: #dab3ee,
+  500: #8c45d9,
+  700: #6a06a0,
+  contrast: (
+    100: #090909,
+    500: #ffffff,
+    700: #ffffff,
+  ));
+$mat-accent-green-scheme: (
+  100: #ccffab,
+  500: #83ff40,
+  700: #65ff00,
+  contrast: (
+    100: #090909,
+    500: #090909,
+    700: #ffffff,
+  ));
+$mat-accent-orange-scheme: (
+  100: #ffd080,
+  500: #ffb140,
+  700: #f59b00,
+  contrast: (
+    100: #090909,
+    500: #090909,
+    700: #ffffff,
+  ));
+$mat-warn-yellow-scheme: (
+  100: #fff2ab,
+  500: #ffd940,
+  700: #ffc400,
+  contrast: (
+    100: #090909,
+    500: #090909,
+    700: #ffffff,
+  ));
+
+$NewCoreSys-primary-blue: mat-palette($mat-primary-blue-scheme);
+$NewCoreSys-primary-purple: mat-palette($mat-primary-purple-scheme);
+$NewCoreSys-accent-green: mat-palette($mat-accent-green-scheme);
+$NewCoreSys-accent-orange: mat-palette($mat-accent-orange-scheme);
+$NewCoreSys-warn-yellow: mat-palette($mat-warn-yellow-scheme);
+
+$NewCoreSys-theme-light-blue: mat-light-theme($NewCoreSys-primary-blue, $NewCoreSys-accent-green, $NewCoreSys-warn-yellow);
+
+.light-blue-mode {
+  @include angular-material-theme($NewCoreSys-theme-light-blue);
+  font-family: Sarabun, sans-serif !important;
+  font-size: 18px;
+  background: #f0eded;
+  color: #090909;
+
+  .mat-divider {
+    border-top-width: 2px;
+    border-top-style: outset;
+  }
+
+  .mat-list-item {
+    .mat-list-item-content {
+      &:hover {
+        background: #bcd7ee !important;
+      }
+    }
+  }
+
+  .list-item-active {
+    .mat-list-item-content {
+      background: #bcd7ee !important;
+      &:hover {
+        background: #bcd7ee !important;
+      }
+    }
+  }
+
+  .mat-menu-content{
+    background: #4273d9 !important;
+    .mat-menu-item{
+      &:hover{
+        background: #bcd7ee !important;
+      }
+    }
+  }
+}
+
+$NewCoreSys-theme-light-purple: mat-light-theme($NewCoreSys-primary-purple, $NewCoreSys-accent-orange, $NewCoreSys-warn-yellow);
+
+.light-purple-mode {
+  @include angular-material-theme($NewCoreSys-theme-light-purple);
+  font-family: Sarabun, sans-serif !important;
+  font-size: 18px;
+  background: #f0eded;
+  color: #090909;
+
+  .mat-divider {
+    border-top-width: 2px;
+    border-top-style: outset;
+  }
+
+  .mat-list-item {
+    .mat-list-item-content {
+      &:hover {
+        background: #dab3ee !important;
+      }
+    }
+  }
+
+  .list-item-active {
+    .mat-list-item-content {
+      background: #dab3ee !important;
+      &:hover {
+        background: #dab3ee !important;
+      }
+    }
+  }
+
+  .mat-menu-content{
+    background: #8c45d9 !important;
+    .mat-menu-item{
+      &:hover{
+        background: #dab3ee !important;
+      }
+    }
+  }
+}
+
+$NewCoreSys-theme-dark-blue: mat-dark-theme($NewCoreSys-primary-blue, $NewCoreSys-accent-green, $NewCoreSys-warn-yellow);
+
+.dark-blue-mode {
+  @include angular-material-theme($NewCoreSys-theme-dark-blue);
+  font-family: Sarabun, sans-serif !important;
+  font-size: 18px;
+  background: #090909;
+  color: #f0eded;
+
+  .mat-divider {
+    border-top-width: 2px;
+    border-top-style: outset;
+    border-color: #ffffff;
+  }
+
+  .mat-list-item {
+    .mat-list-item-content {
+      &:hover {
+        background: #4273d9 !important;
+      }
+    }
+  }
+
+  .list-item-active {
+    .mat-list-item-content {
+      background: #4273d9 !important;
+      &:hover {
+        background: #4273d9 !important;
+      }
+    }
+  }
+
+  .mat-menu-content{
+    background: #4273d9 !important;
+    .mat-menu-item{
+      &:hover{
+        background: #bcd7ee !important;
+      }
+    }
+  }
+}
+
+$NewCoreSys-theme-dark-purple: mat-dark-theme($NewCoreSys-primary-purple, $NewCoreSys-accent-orange, $NewCoreSys-warn-yellow);
+
+.dark-purple-mode {
+  @include angular-material-theme($NewCoreSys-theme-dark-purple);
+  font-family: Sarabun, sans-serif !important;
+  font-size: 18px;
+  background: #090909;
+  color: #f0eded;
+
+  .mat-divider {
+    border-top-width: 2px;
+    border-top-style: outset;
+    border-color: #ffffff;
+  }
+
+  .mat-list-item {
+    .mat-list-item-content {
+      &:hover {
+        background: #8c45d9 !important;
+      }
+    }
+  }
+
+  .list-item-active {
+    .mat-list-item-content {
+      background: #8c45d9 !important;
+      &:hover {
+        background: #8c45d9 !important;
+      }
+    }
+  }
+
+  .mat-menu-content{
+    background: #8c45d9 !important;
+    .mat-menu-item{
+      &:hover{
+        background: #dab3ee !important;
+      }
+    }
+  }
+}
+
+html, body { height: 100%; }
+
+body { margin: 0; }

@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row class="justify-content-between">
+        <button mat-icon-button (click)="sidenavActive()"><mat-icon>menu</mat-icon></button>
+        <div class="row mr-2 ml-auto">
+            <ul class="navbar">
+                <li class="nav-item">
+                    <button mat-button [matMenuTriggerFor]="menu" class="user d-flex align-itmes-center px-1">
+                        <img src="../../assets/img/user9.jpg" alt="User" class="user-image mr-1 p-1">
+                        Prasit Sermsrisuwan
+                        <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu" yPosition="below" xPosition="before">
+                        <button mat-menu-item>
+                            <mat-icon>person</mat-icon>
+                            User Profile
+                        </button>
+                        <button mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            Logout
+                        </button>
+                    </mat-menu>
+                </li>
+                <li class="nav-item">
+                    <button mat-icon-button (click)="modeClick()" class="user d-flex px-1 justify-content-center">
+                        <mat-icon *ngIf="isDarkMode">dark_mode</mat-icon>
+                        <mat-icon *ngIf="!isDarkMode">light_mode</mat-icon>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button mat-icon-button (click)="openDialog()" class="user d-flex px-1 justify-content-center">
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

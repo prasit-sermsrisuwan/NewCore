@@ -1,0 +1,23 @@
+.logo{
+    text-align: center;
+    img{
+        background: #ffffff;
+    }
+}
+
+.mat-icon{
+    vertical-align: center;
+    margin-right: 1rem;
+}
+
+.mat-list-item{
+    font-size: 1rem;
+    height: 44px !important;
+    margin-bottom: 4px;
+    ::ng-deep{
+        .mat-list-item-content{
+            border-radius: 7px;
+            margin: 0 8px;
+        }
+    }
+}
