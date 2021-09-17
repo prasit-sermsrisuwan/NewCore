@@ -3,7 +3,7 @@
 <div mat-dialog-content>
   <mat-form-field appearance="fill">
     <mat-label>Color</mat-label>
-    <mat-select [(ngModel)]="data.resValue" name="data">
+    <mat-select class="custom-select" [(ngModel)]="data.resValue" name="data">
       <mat-option *ngFor="let theme of themes" [value]="theme.value">
           {{ theme.viewValue }}
       </mat-option>
